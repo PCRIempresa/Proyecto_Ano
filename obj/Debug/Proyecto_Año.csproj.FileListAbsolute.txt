@@ -1,0 +1,10 @@
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.AssemblyReference.cache
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Form1.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Properties.Resources.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.GenerateResource.cache
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe.config
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.pdb
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.exe
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.pdb
