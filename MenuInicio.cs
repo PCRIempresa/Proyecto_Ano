@@ -48,12 +48,42 @@ namespace Proyecto_Año
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            
         }
 
         private void labelRegistrate_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void MenuInicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TituloPrincipal_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void btn_Buscar_Paquete_Click(object sender, EventArgs e)
+        {
+            Menu_Clientes frm = new Menu_Clientes();
+            frm.Show();
+        }
+
+        private void btn_Funcionarios_Click(object sender, EventArgs e)
+        {
+            Menu_Funcionarios frm = new Menu_Funcionarios();
+            frm.Show();
+        }
+
+
     }
 }

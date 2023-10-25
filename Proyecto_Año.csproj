@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Proyecto_Año</RootNamespace>
     <AssemblyName>Proyecto_Año</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,32 +47,70 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Busqueda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Busqueda.Designer.cs">
+      <DependentUpon>Busqueda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Admin.Designer.cs">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Conductores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Conductores.Designer.cs">
+      <DependentUpon>Menu_Conductores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Clientes.Designer.cs">
+      <DependentUpon>Menu_Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Paquetes.cs" />
+    <Compile Include="Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Registro.Designer.cs">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu_Funcionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu_Funcionarios.Designer.cs">
+      <DependentUpon>Menu_Funcionarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuInicio.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuInicio.Designer.cs">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registrarse.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Registrarse.Designer.cs">
-      <DependentUpon>Registrarse.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Iniciar Sesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Iniciar Sesion.Designer.cs">
-      <DependentUpon>Iniciar Sesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios.cs" />
+    <EmbeddedResource Include="Busqueda.resx">
+      <DependentUpon>Busqueda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Admin.resx">
+      <DependentUpon>Menu_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Clientes.resx">
+      <DependentUpon>Menu_Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Conductores.resx">
+      <DependentUpon>Menu_Conductores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Registro.resx">
+      <DependentUpon>Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu_Funcionarios.resx">
+      <DependentUpon>Menu_Funcionarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuInicio.resx">
       <DependentUpon>MenuInicio.cs</DependentUpon>
     </EmbeddedResource>
@@ -83,6 +122,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +136,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{B691E011-1797-432E-907A-4D8C69339129}</Guid>
+      <VersionMajor>6</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

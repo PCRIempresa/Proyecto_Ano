@@ -1,5 +1,4 @@
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.AssemblyReference.cache
-C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Form1.resources
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Properties.Resources.resources
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.GenerateResource.cache
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.CoreCompileInputs.cache
@@ -8,3 +7,45 @@ C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyect
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.pdb
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.exe
 C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.pdb
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.MenuInicio.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Clientes.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Registro.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Busqueda.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Funcionarios.resources
+C:\Users\Marcos\Desktop\UTU Buceo\3° BB\Projecto del Año\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Conductores.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe.config
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.pdb
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csprojAssemblyReference.cache
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Busqueda.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Admin.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Clientes.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Conductores.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Registro.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Funcionarios.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.MenuInicio.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Properties.Resources.resources
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.GenerateResource.cache
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.CoreCompileInputs.cache
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.exe
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.pdb
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Interop.ADODB.dll
+C:\Users\alumno\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.ResolveComReference.cache
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe.config
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.exe
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\bin\Debug\Proyecto_Año.pdb
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.AssemblyReference.cache
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Interop.ADODB.dll
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.ResolveComReference.cache
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Busqueda.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Admin.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Clientes.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Conductores.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Registro.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Menu_Funcionarios.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.MenuInicio.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.Properties.Resources.resources
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.GenerateResource.cache
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.csproj.CoreCompileInputs.cache
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.exe
+C:\Users\Marcos\Desktop\Proyecto_Año\Proyecto_Año\obj\Debug\Proyecto_Año.pdb
