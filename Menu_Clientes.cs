@@ -24,68 +24,30 @@ namespace Proyecto_Año
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            string ID_Paquete = txtID.Text;
-            if (!Int32.TryParse(txtID.Text, out id_paquetes))
+            Int32 id;
+            Paquetes paquetes = new Paquetes();
+            paquetes.Conectar = Program.Conexion;
+
+            if (!Int32.TryParse(txtID.Text, out id))
             {
                 MessageBox.Show("La ID debe ser numerico");
             }
-
-            Busqueda frm = new Busqueda();
-            frm.Show();
-
-
-            ////////////////////////////////////////////
-            /*Int32 ci;
-            DialogResult respuesta;
-            Cliente c = new Cliente();
-            c.conexion = Program.cn;
-            if (!Int32.TryParse(txtCi.Text, out ci))
-            {
-                MessageBox.Show("La ci debe ser numerica");
-            }
             else
             {
-                c.ci = ci;
-                switch (c.Buscar())
-                {
-                    case 0: //encontro
-                        gbBusc.Enabled = false;
-                        gbDatos.Visible = true;
-                        btnEliminar.Enabled = true;
-                        txtName.Text = c.nombre;
-                        cboFono.Items.Clear();
-                        foreach (string tel in c.telefonos)
-                        {
-                            cboFono.Items.Add(tel);
-                        }
-                        break;
-                    case 1: //conexion cerrada
-                        MessageBox.Show("Debe logearse nuevamente");
-                        break;
-                    case 2://error al buscar cliente
-                        MessageBox.Show("Error al buscar datos en tabla de clientes");
-                        break;
-                    case 3://no encontro
-                        respuesta = MessageBox.Show("Desea efectuar alta?", "alta de cliente", MessageBoxButtons.YesNo);
-                        if (respuesta == DialogResult.Yes)
-                        {
-                            gbDatos.Visible = true;
-                            gbBusc.Enabled = false;
-                            btnEliminar.Enabled = false;
-                            txtName.Clear();
-                            cboFono.Items.Clear();
-                        }
-                        break;
-                    case 4:
-                        MessageBox.Show("Error al buscar telefonos");
-                        break;
+                paquetes.ID_Paquete = id;
+         
+                Busqueda frmBuscar = new Busqueda();
+                frmBuscar.labelNumero_2.Text = "" + paquetes.ID_Paquete;
+                frmBuscar.labelOrigen_2.Text = "" + paquetes.Almacen_Paquete;
+                frmBuscar.labelDestino_2.Text = "" + paquetes.Direccion_Paquete;
+                frmBuscar.labelFecha_2.Text = "" + paquetes.FechaEgreso_Paquete;
+                frmBuscar.labelUbicacion_2.Text = "" + paquetes.UBI_Paquete;
+                frmBuscar.labelEstado_2.Text = "" + paquetes.Estado_Paquete;
+                frmBuscar.Show();
+                this.Close();
+            }
 
-                }//switch
-            }//if
-            c = null;//destruyo el objeto de la clase clientes
-        }*/
-        ///////////////////////////////////////////////////////////
-    }
+        }
 
         private void Menu_Clientes_Load(object sender, EventArgs e)
         {
@@ -100,6 +62,24 @@ namespace Proyecto_Año
         private void txtID_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void guiaDeLaVentanaActualToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Usted debe ingresar el codigo del producto que compro para que el sistema pueda buscar toda la informacion actualizada que usted necesita. Si no posee deicho codigo el sistema no podra ayudarlo, le recomendamos que llame a atencion al cliente para consultar por la obtencion del codigo de su producto obtenido.");
+        }
+
+        private void contactarAlSoporteTecnicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("En caso de un mal funcionamiento le recomendamos cerrar y volver a iniciar el programa. Si el problema perciste contacte a los siguientes numeros de Quick Carry: 095 147 896 - 098 369 874");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuInicio frmInicio = new MenuInicio();
+            frmInicio.Show();
+            this.Close();
+            
         }
     }
 }

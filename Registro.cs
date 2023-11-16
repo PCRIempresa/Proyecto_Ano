@@ -25,48 +25,69 @@ namespace Proyecto_Año
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            /*Cliente c = new Cliente();
-            Int32 ci;
-            if (!Int32.TryParse(txtCi.Text, out ci))
+            Usuarios usuarios = new Usuarios();
+            Int32 CI;
+            if (!Int32.TryParse(txtCI.Text, out CI))
             {
                 MessageBox.Show("La CI debe tener formato numerico");
             }
             else
             {
-                c.conexion = Program.cn; //para que trabaje con esa base de datos, la abrimos en el login y se la pasamos
-                c.ci = ci;
-                c.nombre = txtName.Text;
-                foreach (String tel in cboFono.Items)
+                usuarios.Conectar = Program.Conexion;
+                usuarios.ci = CI;
+                usuarios.nombre = txtNombre.Text;
+                usuarios.Contraseña = txtContraseña.Text;
+                
+                switch (usuarios.Registrar_Usuarios(btnRegistrar.Enabled))
                 {
-                    c.telefonos.Add(tel);
-                }
-                switch (c.Guardar(btnEliminar.Enabled)) //esta habilitado en la modificacion e inhabilitado en el alta
-                {
-                    case 0:
-                        gbBusc.Enabled = true;
-                        gbDatos.Visible = false;
-                        break;
                     case 1:
-                        MessageBox.Show("Debe ingresar nuevamente");
+                        MessageBox.Show("Ocurrio un Error, por favor ingrese nuevamente los datos");
                         break;
+
                     case 2:
-                        MessageBox.Show("Error 2. Si puede, comuniquese con el administrador");
+                        MessageBox.Show("Han ocurrido problemas al intentar subir su CI");
                         break;
+
                     case 3:
-                        MessageBox.Show("Error 3. Si puede, comuniquese con el administrador");
+                        MessageBox.Show("Han ocurrido problemas al intentar subir su nombre");
                         break;
+
                     case 4:
-                        MessageBox.Show("Hubo errores al efectuar operacion");
+                        MessageBox.Show("Han ocurrido problemas al intentar subir su contraseña");
                         break;
-                }//switch
-            }// if 
-            c = null;
-            */
+
+                    case 5:
+                        MessageBox.Show("Han ocurrido problemas al intentar subir sus datos, por favor comuniquese con Soporte Tequinico");
+                        break;
+                }
+            }
         }
 
         private void txtTelefono_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void queHacerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("En esta ventana usted debe completar los siguientes datos para que su registro pueda ser tomado correctamente, se recomienda que complete todos los datos, la falta de de alguno de estos prodria ENLETECER o INTERRUMPIR con el trabajo del sistema haciendo que su trabajo se vuelva mas complicado");
+        }
+
+        private void label_Telefono_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void necesitasAyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu_Funcionarios frmFuncionarios = new Menu_Funcionarios();
+            frmFuncionarios.Show();
+            this.Close();
         }
     }
 }

@@ -17,21 +17,21 @@ namespace Proyecto_Año
         /// </summary>
         public static MenuInicio frmMenuInicio;
 
-        public static ADODB.Connection conexion = new ADODB.Connection();
+        public static ADODB.Connection Conexion = new ADODB.Connection();
         [STAThread]
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MenuInicio());
+
         }
 
         public static void AutorisoPermisos(string usuario)
         {
+            ADODB.Recordset rs = new ADODB.Recordset();
             Object filasAfectadas;
             String sql;
-            Byte rol;
-            
         }
     }
 }

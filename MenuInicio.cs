@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace Proyecto_Año
 {
     public partial class MenuInicio : Form
     {
+     
+
         public MenuInicio()
         {
             InitializeComponent();
+            
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -63,7 +67,7 @@ namespace Proyecto_Año
 
         private void MenuInicio_Load(object sender, EventArgs e)
         {
-
+            Program.Conexion.Open("PCRI", "marcos.bustamante", "47630602");
         }
 
         private void TituloPrincipal_Click(object sender, EventArgs e)
@@ -74,16 +78,17 @@ namespace Proyecto_Año
 
         private void btn_Buscar_Paquete_Click(object sender, EventArgs e)
         {
-            Menu_Clientes frm = new Menu_Clientes();
-            frm.Show();
+           
+            Menu_Clientes frmClientes = new Menu_Clientes();
+            frmClientes.Show();
+           
         }
 
         private void btn_Funcionarios_Click(object sender, EventArgs e)
         {
-            Menu_Funcionarios frm = new Menu_Funcionarios();
-            frm.Show();
+
+            Menu_Funcionarios frmFuncionarios = new Menu_Funcionarios();
+            frmFuncionarios.Show();
         }
-
-
     }
 }

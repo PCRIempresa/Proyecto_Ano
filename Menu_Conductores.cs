@@ -21,5 +21,17 @@ namespace Proyecto_Año
         {
 
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Menu_Funcionarios frmFuncionarios = new Menu_Funcionarios();
+            frmFuncionarios.Show();
+            this.Close();
+        }
+
+        private void necesitasAyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Como conductor tendras a dispocicion toda la informacion de los vehiculos para tu trabajo, tus recorridos y toda la informacion pertinente a ellos");
+        }
     }
 }

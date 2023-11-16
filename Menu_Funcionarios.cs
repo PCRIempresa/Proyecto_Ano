@@ -13,8 +13,6 @@ namespace Proyecto_Año
 
     public partial class Menu_Funcionarios : Form
     {
-        int ci;
-        string contraseña;
         public Menu_Funcionarios()
         {
             InitializeComponent();
@@ -32,24 +30,71 @@ namespace Proyecto_Año
 
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
-            Registro frm = new Registro();
-            frm.Show();
+            Registro frmRegistro = new Registro();
+            frmRegistro.Show();
+            this.Close();
         }
 
         private void btn_Iniciar_Click(object sender, EventArgs e)
         {
-            try
+            Int32 ci;
+            DialogResult resultado;
+            Usuarios usuarios = new Usuarios();
+            usuarios.Conectar = Program.Conexion;
+            string contraseña = "";
+            string rol_administrador = "Administrador";
+            string rol_conductor = "Conductor";
+
+            if (!Int32.TryParse(txtCI.Text, out ci))
             {
-                Program.conexion.Open("miodbc", txtContraseña.Text, txtCI.Text);
+                MessageBox.Show("La CI debe ser numerico");
             }
-            catch
+            else
             {
-                MessageBox.Show("Usuario o contraseña incorrectos");
-                return;
+                usuarios.ci = ci;
+                usuarios.Contraseña = contraseña;
+                if (!String.Equals(txtContraseña.Text, contraseña))
+                    {
+                    MessageBox.Show("La contraceña es incorrecta");
+                }
+                else
+                {
+                    usuarios.Rol = rol_administrador;
+                    if (String.Equals(usuarios.Rol, rol_administrador))
+                    {
+                        Menu_Admin frmAdministrador = new Menu_Admin();
+                        frmAdministrador.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        usuarios.Rol = rol_conductor;
+                        if (String.Equals(usuarios.Rol, rol_conductor))
+                        {
+                            Menu_Conductores frmConductores = new Menu_Conductores();
+                            Menu_Funcionarios frmFuncionario = new Menu_Funcionarios();
+                            frmConductores.Show();
+                            frmFuncionario.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("El usuario no tiene rol en esta seccion");
+                        }
+                    }
+                    
+
+                }
             }
-            Program.conexion.CursorLocation = ADODB.CursorLocationEnum.adUseClient;
-            Program.AutorisoPermisos(txtCI.Text);
-            this.Close();
+        }
+
+        private void comoIngresarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Escribe tu CI y Contraceña, luego has clic en Ingresar para que el sisitema te muestre tu espacio de trabajo. En caso de no tener un Usuario registrado le recomendamos que se registre");
+        }
+
+        private void comoRegistrarteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Para registrarce solo debe hacer clic en el boton Registrarce y llenar los datos que le pidan");
         }
     }
 }

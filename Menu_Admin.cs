@@ -20,129 +20,90 @@ namespace Proyecto_Año
         private void Menu_Admin_Load(object sender, EventArgs e)
         {
 
-            // LOS ADMINISTRADORES PUEDON ELIMINAR, MODIFICAR O AGREGAR INFORMACION DE LOS PAQUETES
+           
+        }
 
-            // PARA ELIMINAR USUARIO
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-            /* Int32 ci; DialogResult respuesta;
-            Cliente c = new Cliente();
-            if (!Int32.TryParse(txtCi.Text, out ci))
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Menu_Operaciones frmOperaciones = new Menu_Operaciones();
+            frmOperaciones.Show();
+            this.Close();
+        }
+
+        private void necesitasAyudaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Si eres administrador tendras hablilitado el boton BUSCAR para buscar toda la informacion que nececites utilizando la CI o ID de las entidades dentro del sistema colocandolas en sus respectivos lugares");
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Menu_Funcionarios frmFuncionarios = new Menu_Funcionarios();
+            frmFuncionarios.Show();
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Int32 id_Paquete;
+            Int32 id_Almacen;
+            Int32 id_Localidad;
+            Int32 id_Lote;
+            Int32 id_Recorrido;
+            Int32 Ci_Usuario;
+            Int32 Matricula;
+            Paquetes paquetes = new Paquetes();
+            Almacen almacen = new Almacen();
+            Localidad localidad = new Localidad();
+            Lotes lote = new Lotes();
+            Recorrido recorrido = new Recorrido();
+            Usuarios usuario = new Usuarios();
+            Vehiculo vehiculo = new Vehiculo();
+            paquetes.Conectar = Program.Conexion;
+            almacen.Conectar = Program.Conexion;
+            localidad.Conectar = Program.Conexion;
+            lote.Conectar = Program.Conexion;
+            recorrido.Conectar = Program.Conexion;
+            usuario.Conectar = Program.Conexion;
+            vehiculo.Conectar = Program.Conexion;
+
+            if (!Int32.TryParse(txtPaquetes.Text, out id_Paquete))
             {
-                MessageBox.Show("CI debe ser numerico");
+                MessageBox.Show("La ID debe ser numerico");
             }
             else
             {
-                c.conexion = Program.cn;
-                c.ci = ci;
-                respuesta = MessageBox.Show("Esta seguro?", "Eliminar cliente", MessageBoxButtons.YesNo);
-                if (respuesta == DialogResult.Yes)
-                {
-                    switch (c.Eliminar())
-                    {
-                        case 0:
-                            gbBusc.Enabled = true;
-                            gbDatos.Visible = false;
-                            break;
-                        case 1:
-                            MessageBox.Show("Debe loguearse nuevamente");
-                            break;
-                        default:
-                            MessageBox.Show("Hubo errores al efectuar operacion. Reintente");
-                            break;
-                    }
-                }
-            } 
+                paquetes.ID_Paquete = id_Paquete;
 
-            PARA ELIMINAR DATOS DEL USUARIO
-
-            byte resultado = 0;
-            string sql;
-            object filasafectadas;
-            if(_conexion.State == 0)
-            {
-                resultado = 1; //conexion cerrada
+                listBoxAdministrador.Items.Add(paquetes.ID_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.Almacen_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.Direccion_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.FechaEgreso_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.UBI_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.Estado_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.Nota_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.FechaIngreso_Paquete);
+                listBoxAdministrador.Items.Add(paquetes.Tamaño_Paquete);
             }
-            else
-            {
-                sql = "DELETE FROM cliente_telefonos WHERE cliente = " + _ci;
-                try
-                {
-                    _conexion.Execute(sql, out filasafectadas);
-                }
-                catch
-                {
-                    return 2;
-                }
-                sql ="DELETE FROM clientes where ci=" + _ci;
-                try
-                {
-                    _conexion.Execute(sql, out filasafectadas);
-                }
-                catch
-                {
-                    return 3;
-                }
-                filasafectadas = null;
-            }
-            return(resultado);
-
-            */
-
-            // PARA AGREGAR
-            /* 
-            string sql;
-            object filasafectadas;
-            byte resultado = 0; 
-            if (_conexion.State == 0) //conexion con base de datos cerrada
-            {
-                resultado = 1;
-            }
-            else
-            {
-                if (modificacion) //start transaction: se ejecutan todas o no se ejecuta ninguna. se finaliza con commit. en cada catch habria que poner _conexion.Execute("rollboard", out filasafectadas);
-                {
-                    sql = "UPDATE clientes SET nombre='" + _nombre + "' WHEN ci=" + _ci;
-                }
-                else
-                {
-                    sql = "INSERT INTO clientes(ci,nombre) VALUES(" + _ci + ",'" + _nombre + "')";
-                }
-                try
-                {
-                    _conexion.Execute(sql, out filasafectadas);
-                }
-                catch 
-                {
-                    return (2);
-                }
-                if (modificacion)
-                {
-                    sql = "DELETE FROM cliente_telefonos WHERE cliente=" + _ci;
-                    try
-                    {
-                        _conexion.Execute(sql, out filasafectadas);
-                    }
-                    catch
-                    {
-                        return (3);
-                    }
-                }
-                foreach(string tel in _telefonos)
-                {
-                    sql = "INSERT INTO cliente_telefonos(cliente,telefono) VALUES(" + _ci + ",'" + tel + "')";
-                    try
-                    {
-                        _conexion.Execute(sql, out filasafectadas);
-                    }
-                    catch
-                    {
-                        return (4);
-                    }
-                }
-                filasafectadas = null;
-            }
-            return (resultado);
-            */
         }
     }
 }
